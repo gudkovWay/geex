@@ -10,7 +10,7 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isActive }) => {
   return (
-    <AppBar sx={{ boxShadow: '0', backgroundColor: 'primary.main' }}>
+    <AppBar sx={{ boxShadow: '0', backgroundColor: 'primary.main' }} position="static">
       <Container maxWidth="xl" disableGutters>
         <Stack direction="row" justifyContent="space-between">
           <Toolbar sx={{ padding: '0', display: 'flex', alignItems: 'center', flexDirection: 'row', gap: '50px' }} disableGutters>

@@ -1,4 +1,4 @@
-import { Champ, Chevron, Home, Market, Organizations, Ratings, User } from "./icons";
+import { Champ, Chevron, Home, Market, Messages, Organizations, Ratings, User, Watch } from "./icons";
 
 type IconName =
   | 'home'
@@ -8,6 +8,8 @@ type IconName =
   | 'ratings'
   | 'organizations'
   | 'chevron'
+  | 'watch'
+  | 'messages'
 
 interface IconProps {
   name: IconName
@@ -21,6 +23,8 @@ const icons: Record<IconName, React.FC> = {
   'ratings': Ratings,
   'organizations': Organizations,
   'chevron': Chevron,
+  'watch': Watch,
+  'messages': Messages,
 };
 
 const Icon: React.FC<IconProps> = ({ name }) => {

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Вадим",
+    "surname": "Давыдов",
+    "avatar": "/users/1.png"
+  },
+  {
+    "id": 2,
+    "name": "Артем",
+    "surname": "Еременко",
+    "avatar": "/users/2.png"
+  }
+]

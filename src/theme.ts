@@ -10,6 +10,18 @@ const theme: ThemeOptions = {
       fontWeight: 548,
       fontSize: 14
     },
+    body2: {
+      fontWeight: 500,
+      fontSize: 14,
+    },
+    subtitle1: {
+      fontWeight: 400,
+      fontSize: 12,
+    },
+    h3: {
+      fontWeight: 600,
+      fontSize: 20
+    },
   },
   palette: {
     primary: {

@@ -5,3 +5,5 @@ export { Market } from "./Market";
 export { Organizations } from "./Organizations";
 export { Ratings } from "./Ratings";
 export { User } from "./User";
+export { Watch } from "./Watch";
+export { Messages } from "./Messages";
