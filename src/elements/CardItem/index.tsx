@@ -20,7 +20,7 @@ const CardItem: React.FC<CardItemProps> = ({ id, community, date, title, descrip
   if (isPending) return <div>Loading</div>
 
   return (
-    <Card sx={{ margin: '26px 0', borderRadius: '20px', maxWidth: '765px', padding: '28px 24px' }}>
+    <Card sx={{ margin: '26px 0', borderRadius: '20px', maxWidth: '765px', padding: '28px 24px', boxShadow: '0' }}>
 
       <UICardContent
         community={community}
