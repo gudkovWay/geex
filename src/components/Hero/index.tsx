@@ -19,9 +19,17 @@ const Hero = () => {
 
   return (
     <Container maxWidth="xl" disableGutters>
-      <Stack display="flex" sx={{ flexDirection: ["column", "column", "column", "row", "row"], alignItems: ["center", "center", "flex-start"], justifyContent: "space-between", gap: "24px" }}>
-        <Box sx={{maxWidth: ["350px", "350px", "100%", "100%", "100%"]}}>
-          {data.slice(0,2).map((post: CardItemProps) => (
+      <Stack
+        display="flex"
+        sx={{
+          flexDirection: ["column", "column", "column", "row"],
+          alignItems: ["center", "center", "flex-start"],
+          justifyContent: "space-between",
+          gap: "24px"
+        }}
+      >
+        <Box sx={{ maxWidth: ["350px", "350px", "100%", "100%", "100%"] }}>
+          {data.slice(0, 2).map((post: CardItemProps) => (
             <CardItem
               key={post.id}
               id={post.id}

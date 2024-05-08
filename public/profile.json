@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "Александр",
+  "surname": "Магомедов",
+  "country": "Российская Федерация",
+  "birthdate": "12 сентября 1994",
+  "phoneNumber": "+7 (773) 493 39 10",
+  "avatar": "/avatars/1.png",
+  "verified": false,
+  "subscribers": 2,
+  "subscribers_avatars": ["/subscribers/1.png", "/subscribers/2.png"],
+  "subscriptions": 10,
+  "subscriptions_avatars": ["/subscriptions/1.png", "/subscriptions/2.png", "/subscriptions/3.png"]
+}

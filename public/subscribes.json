@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Александр Магомедов",
+    "avatar": "/users/2.png",
+    "category": "Спортсмен",
+    "title": "Призер Олимпийских игр",
+    "original": true
+  },
+  {
+    "id": 2,
+    "name": "Дмитрий Зайцев",
+    "avatar": "/users/2.png",
+    "category": "Судья",
+    "title": "Заслуженный судья и секундант",
+    "original": true
+  },
+  {
+    "id": 3,
+    "name": "Светлана Бессонова",
+    "avatar": "/users/2.png",
+    "category": "Спортсмен",
+    "title": "Призёр Олимпийских Игр",
+    "original": false
+  },
+  {
+    "id": 4,
+    "name": "Андрей Романов",
+    "avatar": "/users/2.png",
+    "category": "Спортсмен",
+    "title": "Мастер спорта СССР и че та кто там тамеще",
+    "original": false
+  },
+  {
+    "id": 5,
+    "name": "Анастасия Землякова",
+    "avatar": "/users/2.png",
+    "category": "Тренер",
+    "title": "Тренер по гандболу",
+    "original": true
+  }
+]

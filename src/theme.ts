@@ -26,6 +26,10 @@ const theme: ThemeOptions = {
       fontWeight: 600,
       fontSize: 20
     },
+    h5: {
+      fontWeight: 600,
+      fontSize: 12
+    },
   },
   palette: {
     primary: {
