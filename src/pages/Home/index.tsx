@@ -1,13 +1,17 @@
 import { useMediaQuery } from "@mui/material"
 
+import { useAuthModal } from "../../context/Auth"
+import { useMenu } from "../../context/Menu"
+
 import Header from "../../components/Header"
 import Hero from "../../components/Hero"
-import AuthModal from "../../elements/AuthModal"
 import UISlider from "../../elements/Slider"
-import { useAuthModal } from "../../context/Auth"
+import AuthModal from "../../elements/AuthModal"
+import Menu from "../../elements/Menu"
 
 const HomePage = () => {
   const { isAuthOpen } = useAuthModal()
+  const { isMenuOpen } = useMenu()
   const isMobile = useMediaQuery("(min-width: 950px)")
   
   return (
@@ -18,6 +22,7 @@ const HomePage = () => {
         <Hero />
       </main>
       {isAuthOpen && <AuthModal /> }
+      {isMenuOpen && <Menu />}
     </>
   )
 }

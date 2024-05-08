@@ -1,10 +1,13 @@
 import { AppBar, Box, Button, ButtonGroup, IconButton, Stack, Toolbar, Typography } from "@mui/material"
 import { Container, useMediaQuery } from "@mui/system"
-import { useAuthModal } from "../../context/Auth"
 
-import HeaderListItem from "../../elements/ListItem"
-import Logo from "../../elements/Logo"
+import { useAuthModal } from "../../context/Auth"
+import { useMenu } from "../../context/Menu"
+
 import Icon from "../Icon"
+import UIListItem from "../../elements/ListItem"
+import Logo from "../../elements/Logo"
+import { headerItems } from "../../shared/constants/list"
 
 export interface HeaderProps {
   isActive: string
@@ -13,6 +16,7 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isActive }) => {
   const { openAuthModal } = useAuthModal()
+  const { openMenu } = useMenu()
   const isMobile = useMediaQuery('(min-width: 950px)')
 
   return (
@@ -22,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ isActive }) => {
           {!isMobile ? (
             <>
               <Logo />
-              <IconButton>
+              <IconButton onClick={openMenu}>
                 <Icon name="menu" />
               </IconButton>
             </>
@@ -30,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ isActive }) => {
             <>
               <Toolbar sx={{ padding: '0', display: 'flex', alignItems: 'center', flexDirection: 'row', gap: '50px' }} disableGutters>
                 <Logo />
-                <HeaderListItem isActive={isActive} />
+                <UIListItem isActive={isActive} arr={headerItems} direction="row" />
               </Toolbar>
               <ButtonGroup disableRipple>
                 <Stack direction="row" alignItems="center">

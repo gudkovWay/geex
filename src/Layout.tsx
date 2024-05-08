@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom"
 import { ModalProvider } from "./context/Auth"
+import { MenuProvider } from "./context/Menu"
 
 const Layout = () => {
   return (
-    <ModalProvider>
-      <Outlet />
-    </ModalProvider>
+    <MenuProvider>
+      <ModalProvider>
+        <Outlet />
+      </ModalProvider>
+    </MenuProvider>
   )
 }
 

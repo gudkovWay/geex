@@ -1,26 +1,19 @@
 import { Link, List, ListItem, Typography } from "@mui/material"
 
 import Icon from "../../components/Icon"
-import { HeaderProps } from "../../components/Header"
+import { menuItemsProps } from "../../shared/constants/list";
 
-type menuItemsProps = {
-  path: string,
-  icon: 'home' | 'market' | 'ratings' | 'champ' | 'organizations',
-  text: string
+
+type UIListItemProps = {
+  isActive: string;
+  arr: menuItemsProps[]
+  direction: 'row' | 'column'
 }
 
-const menuItems: menuItemsProps[] = [
-  { path: '/', icon: 'home', text: 'Лента' },
-  { path: '/market', icon: 'market', text: 'Маркетплейс' },
-  { path: '/ratings', icon: 'ratings', text: 'Рейтинги' },
-  { path: '/champs', icon: 'champ', text: 'Соревнования' },
-  { path: '/organizations', icon: 'organizations', text: 'Организации' }
-]
-
-const HeaderListItem: React.FC<HeaderProps> = ({ isActive }) => {
+const UIListItem: React.FC<UIListItemProps> = ({ isActive, arr, direction }) => {
   return (
-    <List sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', gap: '30px' }} disablePadding>
-      {menuItems.map(item => (
+    <List sx={{ display: 'flex', alignItems: `${direction === 'column' ? 'flex-start' : 'center'}`, width: `${direction === 'column' && '100%'}`, flexDirection: direction, gap: '30px' }} disablePadding>
+      {arr.map(item => (
         <ListItem key={item.path} disablePadding>
           <Link href={item.path} underline="none" sx={{ display: 'flex', alignItems: 'center', direction: 'row', gap: '10px' }}>
             <Icon name={item.icon} />
@@ -32,4 +25,4 @@ const HeaderListItem: React.FC<HeaderProps> = ({ isActive }) => {
   )
 }
 
-export default HeaderListItem
+export default UIListItem

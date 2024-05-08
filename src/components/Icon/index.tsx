@@ -2,6 +2,7 @@ import * as Icons from "./icons";
 
 type IconName =
   | 'all'
+  | 'close'
   | 'champ'
   | 'chevron'
   | 'home'
@@ -10,6 +11,7 @@ type IconName =
   | 'menu'
   | 'messages'
   | 'movie'
+  | 'notification'
   | 'ratings'
   | 'results'
   | 'rewards'
@@ -23,6 +25,7 @@ interface IconProps {
 
 const icons: Record<IconName, React.FC> = {
   'all': Icons.All,
+  'close': Icons.Close,
   'chevron': Icons.Chevron,
   'champ': Icons.Champ,
   'home': Icons.Home,
@@ -31,6 +34,7 @@ const icons: Record<IconName, React.FC> = {
   'menu': Icons.Menu,
   'messages': Icons.Messages,
   'movie': Icons.Movie,
+  'notification': Icons.Notification,
   'ratings': Icons.Ratings,
   'results': Icons.Results,
   'rewards': Icons.Rewards,
