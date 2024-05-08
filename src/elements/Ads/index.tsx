@@ -19,7 +19,7 @@ const Ads = () => {
   return (
     <Stack
       direction="column"
-      sx={{ justifyContent: "flex-start", alignItems: "flex-start", gap: "24px", maxWidth: '370px' }}
+      sx={{ justifyContent: "flex-start", alignItems: "flex-start", gap: "24px", maxWidth: '370px', marginTop: '26px' }}
     >
       <Filter />
       <UIAds

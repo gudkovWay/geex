@@ -3,6 +3,7 @@ export { Champ } from "./Champ";
 export { Chevron } from "./Chevron";
 export { Home } from "./Home";
 export { Market } from "./Market";
+export { Menu } from "./Menu";
 export { Messages } from "./Messages";
 export { Movie } from "./Movie";
 export { Organizations } from "./Organizations";

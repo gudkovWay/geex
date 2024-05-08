@@ -4,6 +4,7 @@ export interface CardContentProps {
   title: string,
   description: string,
   images: string[],
+  tags?: string[],
 }
 
 export interface CardActionProps {

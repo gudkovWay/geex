@@ -1,4 +1,4 @@
-import { All, Champ, Chevron, Home, Market, Messages, Movie, Organizations, Ratings, Results, Rewards, User, Watch } from "./icons";
+import * as Icons from "./icons";
 
 type IconName =
   | 'all'
@@ -7,6 +7,7 @@ type IconName =
   | 'home'
   | 'organizations'
   | 'market'
+  | 'menu'
   | 'messages'
   | 'movie'
   | 'ratings'
@@ -20,19 +21,20 @@ interface IconProps {
 }
 
 const icons: Record<IconName, React.FC> = {
-  'all': All,
-  'chevron': Chevron,
-  'champ': Champ,
-  'home': Home,
-  'organizations': Organizations,
-  'market': Market,
-  'messages': Messages,
-  'movie': Movie,
-  'ratings': Ratings,
-  'results': Results,
-  'rewards': Rewards,
-  'watch': Watch,
-  'user': User,
+  'all': Icons.All,
+  'chevron': Icons.Chevron,
+  'champ': Icons.Champ,
+  'home': Icons.Home,
+  'organizations': Icons.Organizations,
+  'market': Icons.Market,
+  'menu': Icons.Menu,
+  'messages': Icons.Messages,
+  'movie': Icons.Movie,
+  'ratings': Icons.Ratings,
+  'results': Icons.Results,
+  'rewards': Icons.Rewards,
+  'watch': Icons.Watch,
+  'user': Icons.User,
 };
 
 const Icon: React.FC<IconProps> = ({ name }) => {
