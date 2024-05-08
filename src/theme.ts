@@ -18,6 +18,10 @@ const theme: ThemeOptions = {
       fontWeight: 400,
       fontSize: 12,
     },
+    h2: {
+      fontWeight: 600,
+      fontSize: 30
+    },
     h3: {
       fontWeight: 600,
       fontSize: 20

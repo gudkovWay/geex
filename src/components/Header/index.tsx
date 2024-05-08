@@ -1,14 +1,18 @@
 import { AppBar, Box, Button, ButtonGroup, IconButton, Stack, Toolbar, Typography } from "@mui/material"
 import { Container, useMediaQuery } from "@mui/system"
+import { useAuthModal } from "../../context/Auth"
 
 import HeaderListItem from "../../elements/ListItem"
+import Logo from "../../elements/Logo"
 import Icon from "../Icon"
 
 export interface HeaderProps {
   isActive: string
 }
 
+
 const Header: React.FC<HeaderProps> = ({ isActive }) => {
+  const { openAuthModal } = useAuthModal()
   const isMobile = useMediaQuery('(min-width: 950px)')
 
   return (
@@ -17,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ isActive }) => {
         <Stack direction="row" sx={{ padding: '10px 16px', justifyContent: "space-between" }}>
           {!isMobile ? (
             <>
-              <img src="/logo.svg" alt="logo" />
+              <Logo />
               <IconButton>
                 <Icon name="menu" />
               </IconButton>
@@ -25,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ isActive }) => {
           ) : (
             <>
               <Toolbar sx={{ padding: '0', display: 'flex', alignItems: 'center', flexDirection: 'row', gap: '50px' }} disableGutters>
-                <img src="/logo.svg" alt="logo" />
+                <Logo />
                 <HeaderListItem isActive={isActive} />
               </Toolbar>
               <ButtonGroup disableRipple>
@@ -40,7 +44,10 @@ const Header: React.FC<HeaderProps> = ({ isActive }) => {
                       <Typography variant="body1" sx={{ color: 'primary.contrastText' }}>RU</Typography>
                     </Button>
                   </Box>
-                  <IconButton sx={{ backgroundColor: '#f1f3f7', hover: { backgroundColor: '#f1f3f7' }, width: 40, height: 40, borderRadius: '10px', padding: 0 }}>
+                  <IconButton
+                    onClick={openAuthModal}
+                    sx={{ backgroundColor: '#f1f3f7', hover: { backgroundColor: '#f1f3f7' }, width: 40, height: 40, borderRadius: '10px', padding: 0 }}
+                  >
                     <Icon name="user" />
                   </IconButton>
                 </Stack>

@@ -1,6 +1,21 @@
+import { Modal } from "@mui/material"
+
+import { useAuthModal } from "../../context/Auth"
+import UIForm from "./Form";
+
+
 const AuthModal = () => {
+  const { isAuthOpen, closeAuthModal } = useAuthModal()
+
   return (
-    <h1>MODAL</h1>
+    <Modal
+      open={isAuthOpen}
+      onClose={closeAuthModal}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <UIForm />
+    </Modal>
   )
 }
 

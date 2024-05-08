@@ -13,6 +13,7 @@ type IconName =
   | 'ratings'
   | 'results'
   | 'rewards'
+  | 'ru'
   | 'watch'
   | 'user'
 
@@ -33,6 +34,7 @@ const icons: Record<IconName, React.FC> = {
   'ratings': Icons.Ratings,
   'results': Icons.Results,
   'rewards': Icons.Rewards,
+  'ru': Icons.Ru,
   'watch': Icons.Watch,
   'user': Icons.User,
 };

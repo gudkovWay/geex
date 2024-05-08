@@ -15,6 +15,7 @@ const fileExtensionToIconMap = new Map<string, ComponentProps<typeof Icon>["name
   ['rewards', 'rewards'],
   ['results', 'results'],
   ['all', 'all'],
+  ['ru', 'ru'],
 ]);
 
 export function checkExtenshion(fileName: string): ComponentProps<typeof Icon>["name"] {

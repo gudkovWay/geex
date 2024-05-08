@@ -10,5 +10,6 @@ export { Organizations } from "./Organizations";
 export { Ratings } from "./Ratings";
 export { Results } from "./Results";
 export { Rewards } from "./Rewards";
+export { Ru } from "./Ru";
 export { User } from "./User";
 export { Watch } from "./Watch";
