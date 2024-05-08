@@ -3,4 +3,16 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slick-list {
+  max-height: 290px;
+  left: -45px;
+  overflow-x: initial
+}
+
+.slick-track {
+  display: flex;
+  gap: 16px;
 }
